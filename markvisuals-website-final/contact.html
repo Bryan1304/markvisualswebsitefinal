@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact Us - Markvisuals Production House</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="shortcut icon" href="assets/images/markvisuals-favicon-sementara.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="navbar-logo">
+          <img src="assets/images/markvisuals8-logo.png" alt="Markvisuals Logo" />
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="nav-links">
+            <a href="index.html" class="home"><i class="fas fa-home"></i> Home</a>
+            <a href="portfolio.html" class="portfolio"><i class="fas fa-briefcase"></i> Portfolio</a>
+            <a href="about-us.html" class="about"><i class="fas fa-info-circle"></i> About</a>
+            <a href="go-global.html" class="go-global"><i class="fas fa-globe"></i> GO GLOBAL</a>
+            <a href="contact.html" class="contact active"><i class="fas fa-envelope"></i> Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="contact-page">
+      <div class="contact-container">
+        <h1>Get in Touch</h1>
+        <p class="contact-intro">Have a project in mind? We'd love to hear from you.</p>
+
+        <section class="feedback-form">
+          <h2>We Value Your Feedback</h2>
+          <p>Please share your insights with us:</p>
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="feedback">Your Feedback:</label>
+              <textarea id="feedback" name="feedback" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Feedback</button>
+          </form>
+        </section>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Location</h3>
+                <p>Jakarta, Indonesia</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3>Phone</h3>
+                <p>+62 812-3456-7890</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <p>info@markvisuals.com</p>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Markvisuals. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

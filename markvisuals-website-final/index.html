@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Markvisuals Production House" />
+    <meta name="keywords" content="Markvisuals, Production House" />
+    <meta name="author" content="Markvisuals" />
+    <title>Markvisuals Production House</title>
+    <link rel="icon" href="assets/images/markvisuals-favicon-sementara.png" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/preview-sections.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="navbar-logo">
+          <img src="assets/images/markvisuals8-logo.png" alt="Markvisuals Logo" />
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="nav-links">
+            <a href="index.html" class="home active"><i class="fas fa-home"></i> Home</a>
+            <a href="portfolio.html" class="portfolio"><i class="fas fa-briefcase"></i> Portfolio</a>
+            <a href="about-us.html" class="about"><i class="fas fa-info-circle"></i> About</a>
+            <a href="go-global.html" class="go-global"><i class="fas fa-globe"></i> GO GLOBAL</a>
+            <a href="contact.html" class="contact"><i class="fas fa-envelope"></i> Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <h1>Welcome to Markvisuals</h1>
+        <p>Your vision, Our creation.</p>
+        <a href="portfolio.html" class="cta-button explore-button">Explore Our Work</a>
+      </section>
+      <section class="preview-section">
+        <h2>Photography Portfolio</h2>
+        <div id="photographyCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/images/ifgf-good-friday-24/DSC00165.jpg" class="d-block w-100" alt="IFGF Good Friday" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>IFGF Good Friday</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/raffles-jakarta/DSC00271.jpg" class="d-block w-100" alt="Raffles Jakarta" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Raffles Jakarta</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/inertia-project-production-day-1/DSC00497.jpg" class="d-block w-100" alt="Inertia Project" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Inertia Project</h5>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#photographyCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#photographyCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="service-container">
+          <div class="service-item">
+            <i class="fas fa-camera-retro service-icon"></i>
+            <h3>Photography</h3>
+            <p>Professional photography services for events, portraits, and commercial projects.</p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-video service-icon"></i>
+            <h3>Videography</h3>
+            <p>High-quality videography for events, promotional videos, and documentaries.</p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-paint-brush service-icon"></i>
+            <h3>Creative Design</h3>
+            <p>Creative design services for branding, marketing materials, and digital content.</p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-bullhorn service-icon"></i>
+            <h3>Marketing</h3>
+            <p>Comprehensive marketing strategies to promote your brand and reach your audience.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Markvisuals. All rights reserved.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const previewSection = document.querySelector(".preview-section");
+        const sectionPosition = previewSection.getBoundingClientRect().top + window.scrollY;
+        function checkScroll() {
+          const scrollPosition = window.scrollY + window.innerHeight;
+          if (scrollPosition > sectionPosition) {
+            previewSection.classList.add("visible");
+            window.removeEventListener("scroll", checkScroll);
+          }
+        }
+        window.addEventListener("scroll", checkScroll);
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const title = document.querySelector(".animated-title");
+        title.classList.add("animate"); // Add a class to trigger the animation
+      });
+    </script>
+  </body>
+</html>

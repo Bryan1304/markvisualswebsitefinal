@@ -1,0 +1,451 @@
+/* Font Face Declaration */
+@font-face {
+  font-family: "Amsterline";
+  src: url("../fonts/amsterline.regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Smoothie Sans";
+  src: url("../fonts/SmoothieSans.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ascharge";
+  src: url("../fonts/Ascharge.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Boutique Chello";
+  src: url(../fonts/Boutique\ Chello\ TTF\ Demo.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Namaku";
+  src: url(../fonts/Namaku.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Navbar Styles */
+.navbar {
+  font-size: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(248, 249, 250, 0.95);
+  padding: 15px 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  animation: slideDown 0.5s ease-out;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Namaku";
+}
+/* Add margin to body to prevent content from hiding behind fixed navbar */
+/* Other styles... */
+
+body {
+  font-family: "Namaku", sans-serif; /* Set Namaku as the default font */
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Example background color */
+}
+
+/* Other styles... */
+
+.navbar-logo {
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.navbar-logo img {
+  height: 50px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-origin: center;
+  position: relative;
+}
+
+.navbar-logo img:hover {
+  transform: scale(2);
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+}
+
+.navbar-logo::before,
+.navbar-logo::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.navbar-logo::before {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.15) 0%, rgba(255, 87, 51, 0) 70%);
+}
+
+.navbar-logo::after {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, rgba(255, 87, 51, 0) 70%);
+  transition-delay: 0.1s;
+}
+
+.navbar-logo:hover::before {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.navbar-logo:hover::after {
+  transform: translate(-50%, -50%) scale(1.8);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-family: "Namaku", sans-serif;
+  font-weight: 500;
+  font-size: 1.1em;
+  padding: 8px 15px;
+  border-radius: 25px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInUp 0.5s ease forwards;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.02em;
+}
+
+.nav-links a:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.nav-links a:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.nav-links a:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.nav-links a:nth-child(4) {
+  animation-delay: 0.7s;
+}
+.nav-links a:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #341109;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links a:hover::before {
+  width: 80%;
+}
+
+.nav-links a i {
+  margin-right: 5px;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover i {
+  transform: translateY(-2px) scale(1.1);
+}
+
+.nav-links a:hover {
+  color: #ff5733;
+  background-color: rgba(255, 87, 51, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 87, 51, 0.2);
+}
+
+.nav-links a.active {
+  color: #ff5733;
+  background-color: rgba(255, 87, 51, 0.15);
+  box-shadow: 0 2px 4px rgba(255, 87, 51, 0.1);
+}
+
+/* Scroll behavior */
+.navbar.scrolled {
+  background-color: rgba(248, 249, 250, 0.98);
+  padding: 10px 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.navbar.visible {
+  transform: translateY(0);
+}
+
+/* Hero Section */
+.hero {
+  background: url("../images/rumah-angklung-10-8/rumah-angklung-06718-2.jpg") no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+  position: relative;
+  z-index: 2;
+  padding: 50px 20px;
+  margin-bottom: 40px;
+  opacity: 0; /* Start hidden */
+  transform: translateY(50px); /* Start slightly below */
+  animation: fadeInUp 5s forwards; /* Animation name and duration */
+}
+
+/* Keyframes for fade-in and slide-up effect */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0; /* Fully transparent */
+    transform: translateY(20px); /* Start below */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+  }
+}
+
+main {
+  background: #fff;
+  min-height: 100vh;
+}
+
+.hero h1 {
+  font-family: "Namaku", cursive;
+  font-size: 6em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero p {
+  font-family: "Namaku", sans-serif;
+  font-size: 4em;
+  animation: fadeInDown 0.8s ease-in;
+}
+/* Slideshow */
+.slideshow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+}
+
+/* Buttons and Projects */
+.cta-button {
+  font-family: "Namaku";
+  font-size: 30px;
+  background-color: #6e6a68;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #020000;
+}
+
+.featured-projects {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+.project-item {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #343a40;
+  color: white;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .navbar-logo {
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 30px 10px;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+}
+
+.services {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.section-title {
+  font-family: "Namaku", sans-serif;
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px; /* Adjust width as needed */
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 3em;
+  color: #ff5733; /* Change to your preferred color */
+  margin-bottom: 15px;
+}
+
+.service-item h3 {
+  font-family: "Namaku", sans-serif;
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  color: #666;
+  font-size: 1em;
+}

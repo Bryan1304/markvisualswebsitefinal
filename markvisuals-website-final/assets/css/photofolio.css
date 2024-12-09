@@ -1,0 +1,44 @@
+.image-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Hide overflow */
+}
+
+.slider-container {
+  display: flex;
+  width: 100%; /* Adjust based on the number of slides */
+  animation: slide 5s infinite; /* Animation duration and infinite loop */
+}
+
+.slide {
+  width: 100%; /* Each slide takes full width */
+  flex: 0 0 100%; /* Prevent flex items from shrinking */
+  transition: opacity 1s ease; /* Smooth transition */
+}
+
+.slide img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Keyframes for sliding effect */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(0);
+  } /* Show first slide */
+  36.66% {
+    transform: translateX(-100%);
+  } /* Move to second slide */
+  66.66% {
+    transform: translateX(-100%);
+  } /* Show second slide */
+  69.99% {
+    transform: translateX(-200%);
+  } /* Move to third slide */
+  100% {
+    transform: translateX(-200%);
+  } /* Show third slide */
+}
